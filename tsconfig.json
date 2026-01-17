@@ -15,7 +15,8 @@
         "module": "esnext",
         "moduleResolution": "node",
         "jsx": "react-jsx",
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "baseUrl": "./src"
     },
     "include": [
         "src"
