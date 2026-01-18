@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 
-import { LoginPage, UsersPage } from 'pages';
+import { LoginPage, UsersPage, NotFoundPage } from 'pages';
 import { QueryProvider } from './providers';
+import './styles/reset.css';
 import './styles/global.css';
 
 export const AuthContext = React.createContext<{
@@ -29,6 +30,7 @@ const App: React.FC = () => {
                                 <Route path='/' element={<Navigate to={isAuth ? "/users" : "/login"} />} />
                                 <Route path='/users' element={isAuth ? <UsersPage /> : <Navigate to='/login' />} />
                                 <Route path='/login' element={isAuth ? <Navigate to='/users' /> : <LoginPage />} />
+                                <Route path="*" element={<NotFoundPage />} />
                             </Routes>
                         </div>
                     </ConfigProvider>

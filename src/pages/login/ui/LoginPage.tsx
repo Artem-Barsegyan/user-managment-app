@@ -13,10 +13,14 @@ type FieldType = {
 };
 
 const FormWrapper = styled.div`
-  max-width: 350px;
-  margin: 50px auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  width: 90%;
   background-color: #fff;
-  padding: 30px clamp(20px, 5vw, 60px);
+  padding: 20px 35px;
   border-radius: 12px;
 `;
 
